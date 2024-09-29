@@ -26,9 +26,6 @@ importers:
       bridgetown-quick-search:
         specifier: 3.0.3
         version: 3.0.3
-      content-editable:
-        specifier: link:../
-        version: link:..
       element-internals-polyfill:
         specifier: ^1.3.11
         version: 1.3.11
