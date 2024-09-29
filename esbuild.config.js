@@ -24,12 +24,13 @@ const esbuildCopy = require("esbuild-plugin-copy").default;
 // const esbuildOptions = { publicPath: "/my_subfolder/_bridgetown/static" }
 // ```
 const watch = process.argv.includes("--watch");
+const base_path = process.env.BASE_PATH || "/content-editable"
 
 const componentNames = glob
   .sync("../exports/components/*")
   .map((name) => path.parse(name).name);
 
-console.log(path.join(process.env.BASE_PATH, "bridgetown", "static"))
+console.log(path.join(base_path, "bridgetown", "static"))
 
 const components = {};
 
@@ -46,9 +47,9 @@ const esbuildOptions = {
     ...components,
   },
   define: {
-    "process.env.BASE_PATH": `"${process.env.BASE_PATH}"`,
+    "process.env.BASE_PATH": `"${base_path}"`,
   },
-  publicPath: path.join(process.env.BASE_PATH, "bridgetown", "static"),
+  publicPath: path.join(base_path, "bridgetown", "static"),
   outdir: path.join(process.cwd(), outputFolder, "bridgetown", "static"),
 
   splitting: true,

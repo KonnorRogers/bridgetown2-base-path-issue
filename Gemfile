@@ -19,8 +19,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # If you need to upgrade/switch Bridgetown versions, change the line below
 # and then run `bundle update bridgetown`
-# gem "bridgetown", "~> 2.0.0.beta2"
-gem "bridgetown", "~> 1.3"
+gem "bridgetown", "~> 2.0.0.beta2"
+# Downgrade to 1.3 and it works as expected
+# gem "bridgetown", "~> 1.3"
 gem "bridgetown-quick-search", "~> 3.0"
 # gem "bridgetown-routes", "~> 2.0.0.beta2"
 

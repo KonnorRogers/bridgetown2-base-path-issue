@@ -1,5 +1,5 @@
-import "./src/stackblitz-button.js"
-import "./src/codepen-button.js"
+// import "./src/stackblitz-button.js"
+// import "./src/codepen-button.js"
 import "../styles/index.css";
 import { Application } from "@hotwired/stimulus";
 
