@@ -12,15 +12,15 @@ npm install
 bin/bridgetown start
 ```
 
-Navigate to `http://localhost:4000/content-editable` and it should look correct.
+Navigate to `http://localhost:4000/content-editable` and it should be broken.
 
 Now, go to `Gemfile`, and make the following change:
 
 ```diff
-+ gem "bridgetown", "~> 2.0.0.beta2"
-- gem "bridgetown", "~> 1.3"
+- gem "bridgetown", "~> 2.0.0.beta2"
++ gem "bridgetown", "~> 1.3"
 ```
 
 Run `bundle update`
 
-and then try `bin/bridgetown start` and try navigating to `http://localhost:4000/content-editable` and it should be broken.
+and then try `bin/bridgetown start` and navigate to `http://localhost:4000/content-editable` and it should work as expected.
